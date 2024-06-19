@@ -7,6 +7,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using System.Diagnostics.CodeAnalysis;
+using System.Windows.Media;
 
 namespace kursovaya
 {
@@ -259,5 +260,18 @@ namespace kursovaya
 			parodontax.Show(); 
 			Close();
 		}
+		private void RegisterButton_Click(object sender, RoutedEventArgs e)
+		{
+			RegisterPanel.Visibility = Visibility.Visible;
+			LoginPanel.Visibility = Visibility.Collapsed;
+		}
+
+		private void LoginButton_Click(object sender, RoutedEventArgs e)
+		{
+			LoginPanel.Visibility = Visibility.Visible;
+			RegisterPanel.Visibility = Visibility.Collapsed;
+		}
+		
+		
 	}
 }
